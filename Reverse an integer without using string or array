@@ -1,0 +1,13 @@
+public class MyClass {
+    public static void main(String args[]) {
+    int a = 12341;
+    int reverse = 0;
+    
+    while(a!=0){
+    reverse = (reverse + (a%10))*10;
+    a = a/10;
+    }
+    reverse = reverse/10;
+    System.out.println("reverse "+ reverse);
+    }
+}
