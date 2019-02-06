@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        int startValue = Integer.parseInt(args[0]);
+        int EndValue = Integer.parseInt(args[1]);
+        ArrayList ResultVal = new ArrayList();
+        while(startValue <= EndValue){
+            if((startValue%7) == 0 && (startValue%5) != 0){
+                ResultVal.add(startValue);
+                }startValue++;
+            }
+        for (int j = 0; j < ResultVal.size(); j++) {
+			System.out.print(ResultVal.get(j));
+			    if(j<ResultVal.size()-1){
+			        System.out.print(",");
+			    }
+        }
+    }
+}
+
+Note : Command line argument passed is "2000 3200"
