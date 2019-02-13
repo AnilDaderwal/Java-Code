@@ -1,0 +1,21 @@
+import java.io.*;  
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) throws IOException {
+    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));            
+    System.out.println("Enter the values");    
+    String name=br.readLine(); 
+    String[] Value = name.split(",");
+    ArrayList<Integer> factorValue = new ArrayList<Integer>();
+    for(int i=0;i<=Value.length-1;i++){
+        int val = Integer.parseInt(Value[i]);
+        int fVal = 1;
+        for(int j = 1; j<=val;j++){
+            fVal = fVal*j;
+        }
+        factorValue.add(fVal);
+    }
+    System.out.println("Factorial for "+ Arrays.toString(Value)+" is "+ factorValue ); 
+    }
+}
