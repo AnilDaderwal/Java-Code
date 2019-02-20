@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) throws IOException {
+        int c = 50;
+        int h = 30;
+        
+        InputStreamReader r=new InputStreamReader(System.in);  
+        BufferedReader br=new BufferedReader(r);  
+        System.out.println("Enter multiple values using , :");  
+        String name=br.readLine(); 
+        List<String> strNum=new ArrayList<String>(Arrays.asList(name.split(",")));
+        System.out.println("values entered are : " + strNum);
+        List<Integer> outputVal=new ArrayList<Integer>();
+        for(int j=0;j<=strNum.size()-1;j++){
+            int intNum = Integer.parseInt(strNum.get(j));
+            Double val = Math.sqrt((2*c*intNum)/h);
+            outputVal.add((int)Math.round(val));
+        }
+        System.out.println("values are : " + outputVal);
+    }
+}
