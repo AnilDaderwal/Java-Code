@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        ArrayList<String> input = new ArrayList<String>();
+        String[] splitdata= args[0].split(",");
+        for (String data : splitdata) {
+            input.add(data);
+        }
+        System.out.println("Input Provided : "+input);
+        Collections.sort(input);    // sorting in asc order
+        System.out.println("Output after Sorting in asc order: "+input);
+        Collections.sort(input, Collections.reverseOrder());    // Sorting in desc order
+        System.out.println("Output after Sorting in Desc order: "+input);
+    }
+}
+
+
+Output:
+
+Input Provided : [without, hello, bag, world]
+Output after Sorting in asc order: [bag, hello, without, world]
+Output after Sorting in Desc order: [world, without, hello, bag]
